@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dosha Quiz</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container quiz-container mt-5">
+    <h1 class="text-center">Dosha Quiz</h1>
+    <form id="doshaForm">
+      <!-- Add your questions and options here as needed -->
+      <div class="form-group">
+        <p>How would you describe your body frame?</p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="vata">
+          <label class="form-check-label">Thin and slender</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="pitta">
+          <label class="form-check-label">Medium build</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="q1" value="kapha">
+          <label class="form-check-label">Solid and well-built</label>
+        </div>
+      </div>
+      <!-- Repeat the above structure for each question -->
+
+      <button type="button" onclick="calculateDosha()" class="btn btn-primary">Submit</button>
+    </form>
+
+    <div id="result" class="mt-4"></div>
+
+    <div id="emailSubscription" style="display: none;" class="mt-4">
+      <h2 class="text-center">Email Subscription</h2>
+      <p class="text-center">Would you like to receive email updates on managing your Doshas?</p>
+      <form id="subscribeForm" class="text-center">
+        <div class="form-group">
+          <label for="email">Enter your email:</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <button type="button" onclick="subscribe()" class="btn btn-success">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Include Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
